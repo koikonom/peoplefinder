@@ -109,6 +109,7 @@
         = link_to 'Crop image', edit_person_image_path(@person)
 
   .form-group.save-cancel-actions
+    = link_to 'Preview', edit_person_path(:preview => true)
     = f.submit class: 'button'
     .cancel
       = link_to 'Cancel and go to profile page', @person.new_record? ? :back : @person

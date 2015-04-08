@@ -25,6 +25,7 @@ class PeopleController < ApplicationController
   # GET /people/1/edit
   def edit
     @activity = params[:activity]
+    @preview = true if params[:preview]
     @person.memberships.build if @person.memberships.empty?
   end
 
