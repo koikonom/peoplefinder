@@ -1,6 +1,11 @@
 #!/bin/bash
 cd /rails
 
+while test -f /tmp/db.lock; 
+    do echo 'db operation in progress. waiting'
+    sleep 5s
+done
+
 # Increment restart metric
 echo "restart.delayed_job:1|s" | nc.traditional -w 1 -u 127.0.0.1 8125
 
