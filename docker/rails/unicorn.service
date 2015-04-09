@@ -10,10 +10,13 @@ if [ -z "$APP_MASTER_SERVER" -o "$APPHOST" == "$APP_MASTER_SERVER" ]; then
         echo "running migrate"        >>/rails/log/unicorn.log
         bundle exec rake db:migrate   >>/rails/log/unicorn.log 2>&1
         ;;
-    seed)
+    reset)
         echo "running db:reset"     >>/rails/log/unicorn.log
         bundle exec rake db:reset >>/rails/log/unicorn.log 2>&1
         ;;
+    seed)
+        echo "running db:seed"     >>/rails/log/unicorn.log
+        bundle exec rake db:seed >>/rails/log/unicorn.log 2>&1
     esac
 
 else
