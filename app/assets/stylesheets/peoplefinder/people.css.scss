@@ -132,6 +132,7 @@ img.preview {
   margin-top: 5px;
   padding: 15px 0 1px 15px;
   font-weight: bold;
+  overflow: hidden;
   .bar {
     line-height: 15px;
     width: 200px;
@@ -199,6 +200,12 @@ form {
       margin: 0.4em 0.4em 0 0;
     }
   }
+  .button-preview{
+  text-align: center;
+  line-height: 2;
+  margin: 5px 0 10px 0;
+  padding: 0 30px;
+}
 }
 
 ul.tags {
